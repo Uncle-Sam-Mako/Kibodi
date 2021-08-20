@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img{
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html, body, #root, .home{
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+.btn{
+  background: transparent;
+  padding: 8px 25px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn.btn-white{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 1px rgb(0 0 0 / 20%);
+  color: #ff4e6b;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.btn.btn-white:active{
+  box-shadow: 0px 3px 1px rgb(0 0 0 / 20%);
+}
+.home{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.home-img{
+  width: 30%;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.home-text h3{
+  width: 70%;
+  font-size: 5em;
+  line-height: .8em;
+  position: relative;
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.home-text h3::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 80%;
+  left: 0;
+  width: 60%;
+  height: 20%;
+  background: #fff;
+  z-index: -1;
+}
+.home-text p{
+  color: #fff;
+}
+.backround-rect{
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  background: #ff4e6c17;
+  z-index: -1;
+  border-radius: 50px;
+  top: -25%;
+  left: -2%;
+  
+}
+.backround-circle{
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background: #ff4e6b;
+  z-index: -1;
+  border-radius: 100%;
+  left: -100%;
+  animation: moveCircle .5s .3s linear both;
+}
+@keyframes moveCircle {
+  100%{
+    left: 40%;
   }
 }
