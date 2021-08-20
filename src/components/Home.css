@@ -1,0 +1,63 @@
+.home{
+    position: relative;
+    overflow: hidden;
+}
+.home header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-img{
+    padding: 20px;
+}
+
+.home-text h3{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 94px;
+    position: relative;
+    margin: 0;
+}
+.home-text h3 span{
+    display: block;
+}
+.home-text h3::after{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 80%;
+    left: 0;
+    width: 60%;
+    height: 20%;
+    background: #ff747465;
+    z-index: -1;
+}
+.home-text p{
+    color: #fff;
+}
+.backround-circle{
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: var(--color-primary);
+    z-index: -1;
+    border-radius: 100%;
+    top: -25px;
+    left: -100%;
+    animation: moveCircle .5s .3s linear both;
+}
+
+/*****Animations*******/
+@keyframes moveCircle {
+    100%{
+        left: 40%;
+    }
+}
+
+
+
+
+
+
+
