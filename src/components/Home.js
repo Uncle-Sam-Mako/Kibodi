@@ -25,11 +25,11 @@ class Home extends Component{
                     <header>
                         <div className="home-text">
                             <h3>
-                                <span>Welcome to</span>
-                                <span>Kibodi!</span>
+                                <span style={{color : '#ff7474'}}>Welcome to</span>
+                                <span style={{lineHeight: "20px"}}>Kibodi!</span>
                             </h3>
-                            <p>Let's increase your typing speed</p>
-                            <button className="btn btn-white">start</button>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius aut tenetur recusandae magnam animi ad.</p>
+                            <button className="btn btn-white">Let's start</button>
                         </div>
                         <div className="home-img">
                             <img src={homeImg} alt="" />
